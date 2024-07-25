@@ -15,7 +15,7 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 st.title('Generative AI Content Generator')
 
 # User input for the content description
-user_input = st.text_area('Enter a description for the image:', height=200)
+user_input = st.text_area('Write a Prompt:', height=200)
 
 if st.button('Generate Content'):
     if user_input:
@@ -23,5 +23,5 @@ if st.button('Generate Content'):
         st.write('Generated Content:')
         st.write(response.text)
     else:
-        st.warning('Please enter a description for the image.')
+        st.warning('Please write a Prompt:')
 
